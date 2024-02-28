@@ -30,22 +30,3 @@ class MySpider(scrapy.Spider):
         with open(file_name, "w", encoding="utf-8") as file:
             for song, group in zip(song_list, song_main_artists):
                 file.write(f"{group} - {song}\n")
-
-class MySpider(scrapy.Spider):
-    name = "favorite_listener"
-    start_urls = ["https://music.yandex.com/users/ArchieSofa/playlists/3"]
-    
-    songs_per_load = 100
-
-    def parse(self, response):
-        song_id = response.css("div.d-track.typo-track.d-track_selectable.d-track_with-cover.d-track_in-lib")
-        # data-id="1"
-        song_name = response.css("a.d-track__title.deco-link.deco-link_stronger::text").extract()
-        song_artists = response.css("span.d-track__artists")
-        song_main_artist = []
-        
-        for artist in song_artists: 
-            first_artist = artist.css("a::text").extract_first()
-            if first_artist:
-                song_main_artist.append(first_artist)
-

@@ -19,7 +19,7 @@
 
 After finishing first steps open you terminal (the way to do it depends on OS use use) and write this command:
 
-``scrapy runspider crawler.py``
+``scrapy runspider playlist_transfer.py``
 
 If you do everything right, you will find new files in this folder. Those will be named as playlists you wanted to create ("New Pop.txt" and "This winter top.txt" from example).  
 Congrats! All you need to do then is to use a website like [this](https://soundiiz.com/), where you need to registrate and login to your spotify or anything else you want to use.  

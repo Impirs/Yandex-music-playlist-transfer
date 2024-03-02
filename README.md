@@ -15,7 +15,7 @@
 
 ``https://music.yandex.com/users/music-blog/playlists/1624, This winter top``
 
-1. After you create a txt file, last step you need to do is to install the speciall library for python, by using this commands:
+4. After you create a txt file, last step you need to do is to install the speciall library for python, by using this commands:
 
 **For Windows:**
 

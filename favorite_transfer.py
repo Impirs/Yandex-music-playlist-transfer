@@ -35,14 +35,13 @@ class MySpider(scrapy.Spider):
                 song_main_artists.append(first_artist)
 
         self.write_list_to_file( song_list, song_main_artists)
-        
-        self.padding_top += 8840
 
-        if len(song_list) == self.songs_per_load:
+        if self.padding_top <= self.padding_bottom - 8840:
             next_url = self.generate_next_url(response.url)
             yield scrapy.Request(next_url, callback=self.parse)
 
     def generate_next_url(self, current_url):
+        self.padding_top += 8840
         next_padding = self.padding_top
         next_url = current_url + f'?padding_top={next_padding}'
         return next_url

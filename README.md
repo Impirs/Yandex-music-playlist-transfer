@@ -1,6 +1,7 @@
 # How to use this program
 
 ## 1. Set all you will need
+
 0. First of all you should have puthon 3+ already installed on your computer.  
    If you don't have it yet, use this [website](https://www.python.org/downloads/) or find it in youtube, if it's easier for you)
 
@@ -10,10 +11,21 @@
 
 3. Find any number of playlists you want to export and write full url and Title you want into our file like this:
 
-``  https://music.yandex.com/users/music-blog/playlists/2440, New Pop ``
+``https://music.yandex.com/users/music-blog/playlists/2440, New Pop``
 
-``  https://music.yandex.com/users/music-blog/playlists/1624, This winter top ``
+``https://music.yandex.com/users/music-blog/playlists/1624, This winter top``
 
+1. After you create a txt file, last step you need to do is to install the speciall library for python, by using this commands:
+
+**For Windows:**
+
+``pip install Scrapy``
+
+**For Linux:**
+
+``sudo apt install python3-scrapy``
+
+You can find full guide for the installation on [this website](https://docs.scrapy.org/en/latest/intro/install.html).
 
 ## 2. Use the script
 
